@@ -44,11 +44,11 @@ $('.your-enemy').on('click',function(x){
 
 $('.btn').on('click',function(){
    var enemypower = Math.round(Math.random()*40)
-<<<<<<< HEAD
+
    var yourpower =  Math.round(Math.random()*70)
-=======
+
    var yourpower =  Math.round(Math.random()*40)
->>>>>>> 8c342d26d51aca609d8970b304e2581924c86bc3
+
    ourHeart -=enemypower
    heart -=yourpower
 
