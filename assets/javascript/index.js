@@ -39,10 +39,13 @@ $('.your-enemy').on('click',function(x){
       x.currentTarget.classList.add('defender')
         $('.defennded-image').html(x.currentTarget)
       heart = $('.'+secondClass).attr('data-power')
+      
     }
 })
 
+
 $('.btn').on('click',function(){
+   
    var enemypower = Math.round(Math.random()*40)
 
    var yourpower =  Math.round(Math.random()*70)
@@ -52,6 +55,7 @@ $('.btn').on('click',function(){
    ourHeart -=enemypower
    heart -=yourpower
 
+   
 $('.p' + secondClass).html(heart)
 $('.p'+querrySelect).html(ourHeart)
 if(ourHeart <=0){
@@ -59,15 +63,21 @@ if(ourHeart <=0){
    document.querySelector('.btn').disabled =true
    document.querySelector('.btn').style.opacity =1
 }
+
 if(heart <=0){
-   haveoOrNot = true
+  
    $('.defennded-image').html(' ')
-}
+   
+   haveoOrNot = true
+   console.log($('.defennded-image > .eminem').length )
+ 
+
 if(($('.your-enemy').length)==0){
    document.querySelector('.btn').disabled =true
    document.querySelector('.btn').style.opacity =1
    alert('You are Legend Bro')
 }
-})
+}})
 
 })
+
